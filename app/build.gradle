@@ -1,5 +1,10 @@
 apply plugin: 'com.android.application'
-
+Properties props = new Properties()
+try {
+    props.load(file('twitter.properties').newDataInputStream())
+} catch (Exception ex) {
+    throw new GradleException("Missing twitter.properties, check the twitter.properties.sample file.");
+}
 android {
     compileSdkVersion 25
     buildToolsVersion "26.0.0"
@@ -12,7 +17,17 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
+        debug {
+            resValue "string", "com.twitter.sdk.android.CONSUMER_KEY", "\"${props.getProperty("twitterConsumerKey")}\""
+            resValue "string", "com.twitter.sdk.android.CONSUMER_SECRET", "\"${props.getProperty("twitterConsumerSecret")}\""
+            resValue "bool", "com.twitter.sdk.android.TRACE_ENABLED", "true"
+            resValue "bool", "com.twitter.sdk.android.COLLECT_IDENTIFIERS_ENABLED", "true"
+        }
         release {
+            resValue "string", "com.twitter.sdk.android.CONSUMER_KEY", "\"${props.getProperty("twitterConsumerKey")}\""
+            resValue "string", "com.twitter.sdk.android.CONSUMER_SECRET", "\"${props.getProperty("twitterConsumerSecret")}\""
+            resValue "bool", "com.twitter.sdk.android.TRACE_ENABLED", "false"
+            resValue "bool", "com.twitter.sdk.android.COLLECT_IDENTIFIERS_ENABLED", "true"
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
@@ -30,6 +45,15 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.facebook.android:facebook-android-sdk:[4,5)'
     compile 'com.google.firebase:firebase-auth:10.0.1'
+    compile 'com.google.android.gms:play-services-auth:10.0.1'
+    // Add the Twitter Core Kit//
+    compile 'com.squareup.okhttp3:okhttp:3.4.2'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.4.2'
+    compile 'com.twitter.sdk.android:twitter-core:3.0.0'
+    compile 'com.twitter.sdk.android:tweet-ui:3.0.0'
+    compile 'com.twitter.sdk.android:tweet-composer:3.0.0'
+    compile 'com.twitter.sdk.android:twitter-mopub:3.0.0'
+
     testCompile 'junit:junit:4.12'
 }
 

@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "619513759153-3l0604p6q6046df667ss6h9lm15d1prk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "diet.indian.best.indiandiet",
+            "certificate_hash": "2883f4ba40aa4bcc4f5948f20478a02860fa8cf2"
+          }
+        },
+        {
           "client_id": "619513759153-dgtmef59oga764qnm0rtt1moh99lbm62.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
