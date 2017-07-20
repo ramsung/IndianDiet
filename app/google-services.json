@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "619513759153",
+    "firebase_url": "https://indiandiet-6f27b.firebaseio.com",
+    "project_id": "indiandiet-6f27b",
+    "storage_bucket": "indiandiet-6f27b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:619513759153:android:7b61939d6f4c2593",
+        "android_client_info": {
+          "package_name": "diet.indian.best.indiandiet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "619513759153-dgtmef59oga764qnm0rtt1moh99lbm62.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "diet.indian.best.indiandiet",
+            "certificate_hash": "67f9ad1966a8c88cc85c629a50e16c3ec773e1b5"
+          }
+        },
+        {
+          "client_id": "619513759153-k7fu4qkg23t7udofqibt2fboek99o07p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDS7_IH5XLBoqUbGTcgf9FV-MVmaU6XaFk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "619513759153-k7fu4qkg23t7udofqibt2fboek99o07p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
