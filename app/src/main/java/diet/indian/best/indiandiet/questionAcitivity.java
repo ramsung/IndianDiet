@@ -23,21 +23,18 @@ public class questionAcitivity extends AppCompatActivity {
 		q1.add("option1");
 		q1.add("option2");
 		q1.add("option3");
-		q1.add("option5");
-		q1.add("option5");
+		q1.add("option4");
 
 		q2.add("option1");
 		q2.add("option2");
 		q2.add("option3");
-		q2.add("option4");
-		q2.add("option5");
 
 		Questions first = new Questions("Whats Your name?",q1);
 		Questions second = new Questions("Whats Your age?",q2);
 
 		questionList.add(first);
 		questionList.add(second);
-		adapter = new QuestionAdapter(questionList);
+		adapter = new QuestionAdapter(questionList,getApplicationContext());
 		recyclerView = (RecyclerView) findViewById(R.id.container);
 		recyclerView.setLayoutManager(layoutManager);
 		recyclerView.setAdapter(adapter);

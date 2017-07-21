@@ -38,56 +38,7 @@
                 android:textColor="@color/colorPrimary"
                 android:textSize="18sp" />
 
-            <RadioButton
-                android:id="@+id/rb1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/colorPrimaryDark"
-                android:buttonTint="@color/colorPrimaryDark"
-                android:textSize="14sp"
-                android:text="rb1"
-                android:textStyle="italic" />
 
-            <RadioButton
-                android:id="@+id/rb2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="rb1"
-                android:buttonTint="@color/colorPrimaryDark"
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="14sp"
-                android:textStyle="italic" />
-
-            <RadioButton
-                android:id="@+id/rb3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="rb1"
-                android:buttonTint="@color/colorPrimaryDark"
-                android:textColor="@color/colorPrimaryDark"
-                android:textStyle="italic" />
-
-            <RadioButton
-                android:id="@+id/rb4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="rb1"
-                android:buttonTint="@color/colorPrimaryDark"
-                android:textColor="@color/colorPrimaryDark"
-                android:textStyle="italic" />
-
-            <RadioButton
-                android:id="@+id/rb5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="rb1"
-                android:buttonTint="@color/colorPrimaryDark"
-                android:textColor="@color/colorPrimaryDark"
-                android:textStyle="italic" />
 
         </RadioGroup>
 
