@@ -49,6 +49,10 @@ public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.MyView
 	public void onBindViewHolder(QuestionAdapter.MyViewHolder holder, int position) {
 		Questions question = questions.get(position);
 		holder.textQuestion.setText(question.getCustquest());
+		if(holder.group != null){
+			holder.group.removeAllViews();
+		}
+		holder.group.removeAllViews();
 		for (int i = 0; i < questions.get(position).getOptions().size(); i++) {
 			RadioButton rdbtn = new RadioButton(context);
 
