@@ -11,16 +11,16 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="5dp"
-        card_view:cardBackgroundColor="@color/colorAccent"
+        card_view:cardBackgroundColor="@color/com_facebook_button_background_color"
         card_view:cardCornerRadius="10dp"
         card_view:contentPadding="10dp">
 
 
         <RadioGroup
+            android:id="@+id/radiogroup"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="2dp"
-            android:id="@+id/radiogroup"
             android:paddingBottom="2dp"
             android:paddingEnd="2dp"
             android:paddingLeft="2dp"
@@ -33,11 +33,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Question?"
                 android:fontFamily="sans-serif-condensed"
+                android:text="Question?"
                 android:textColor="@color/colorPrimary"
                 android:textSize="18sp" />
-
 
 
         </RadioGroup>
