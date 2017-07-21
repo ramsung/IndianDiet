@@ -6,4 +6,9 @@
 </string>
     <string android:name="com.twitter.sdk.android.CONSUMER_KEY">TNZXRkBN9yej8n0icgWsnh8zX</string>
     <string android:name="com.twitter.sdk.android.CONSUMER_SECRET">IBebQWR3mcalHHkwBu4AUPTJG6pFMVeDgpHNCB7Si518PxiQH1</string>
+    <string name="facebook_app_id">504355006568401</string>
+
+    <string name="title_activity_quest">quest</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>

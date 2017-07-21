@@ -38,6 +38,8 @@ import com.twitter.sdk.android.core.TwitterException;
 import com.twitter.sdk.android.core.TwitterSession;
 import com.twitter.sdk.android.core.identity.TwitterAuthClient;
 import com.twitter.sdk.android.core.identity.TwitterLoginButton;
+import com.facebook.FacebookSdk;
+import com.facebook.appevents.AppEventsLogger;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
@@ -48,11 +50,11 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 	private FirebaseAuth.AuthStateListener mAuthListener;
 	Button googleLogin;
 	GoogleApiClient mGoogleApiClient;
-	TwitterLoginButton twitterlogin;
+	//TwitterLoginButton twitterlogin;
 	FirebaseUser user;
-	static String CONSUMER_KEY = "TNZXRkBN9yej8n0icgWsnh8zX";
-	static String CONSUMER_SECRET = "IBebQWR3mcalHHkwBu4AUPTJG6pFMVeDgpHNCB7Si518PxiQH1";
-	TwitterAuthClient mTwitterAuthClient;
+	//static String CONSUMER_KEY = "TNZXRkBN9yej8n0icgWsnh8zX";
+	//static String CONSUMER_SECRET = "IBebQWR3mcalHHkwBu4AUPTJG6pFMVeDgpHNCB7Si518PxiQH1";
+	//TwitterAuthClient mTwitterAuthClient;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -69,7 +71,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 				.build());
 
 
-		Twitter.initialize(this);
+		/*Twitter.initialize(this);
 		final HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor();
 		loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BASIC);
 		final OkHttpClient customClient = new OkHttpClient.Builder()
@@ -85,7 +87,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 		} else {
 			customApiClient = new TwitterApiClient(customClient);
 			TwitterCore.getInstance().addGuestApiClient(customApiClient);
-		}
+		}*/
 		mAuth = FirebaseAuth.getInstance();
 		GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
 				.requestIdToken(getString(R.string.default_web_client_id))
@@ -102,8 +104,8 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 				.addApi(Auth.GOOGLE_SIGN_IN_API, gso)
 				.build();
 
-		googleLogin = (Button) findViewById(R.id.google_login_button);
-		twitterlogin = (TwitterLoginButton) findViewById(R.id.login_button);
+		googleLogin = (Button) findViewById(R.id.sign_in_button);
+		//twitterlogin = (TwitterLoginButton) findViewById(R.id.twt_login_button);
 
 		googleLogin.setOnClickListener(new View.OnClickListener() {
 			@Override
@@ -112,7 +114,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 			}
 		});
 
-		twitterlogin.setCallback(new Callback<TwitterSession>() {
+		/*twitterlogin.setCallback(new Callback<TwitterSession>() {
 			@Override
 			public void success(Result<TwitterSession> result) {
 				requestEmailAddress(getApplicationContext(), result.data);
@@ -122,7 +124,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 			public void failure(TwitterException exception) {
 
 			}
-		});
+		});*/
 	}
 
 	public void signIn() {
@@ -153,7 +155,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 			twitterlogin.onActivityResult(requestCode, resultCode, data);
 		}*/
 
-		twitterlogin.onActivityResult(requestCode, resultCode, data);
+		//twitterlogin.onActivityResult(requestCode, resultCode, data);
 	}
 
 	private void handleSignInResult(GoogleSignInResult result) {
