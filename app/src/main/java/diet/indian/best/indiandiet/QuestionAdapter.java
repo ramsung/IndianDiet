@@ -23,10 +23,12 @@ import java.util.List;
 public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.MyViewHolder> {
 
 	private ArrayList<Questions> questions;
+	private Context context;
 
 
-	public QuestionAdapter(ArrayList<Questions> questions) {
+	public QuestionAdapter(ArrayList<Questions> questions,Context context) {
 		this.questions = questions;
+		this.context = context;
 
 		Log.i("question",String.valueOf(questions.size()));
 		for(Questions q : questions){
@@ -47,12 +49,12 @@ public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.MyView
 	public void onBindViewHolder(QuestionAdapter.MyViewHolder holder, int position) {
 		Questions question = questions.get(position);
 		holder.textQuestion.setText(question.getCustquest());
-		holder.rb1.setText(question.getOptions().get(0));
-		holder.rb2.setText(question.getOptions().get(1));
-		holder.rb3.setText(question.getOptions().get(2));
-		holder.rb4.setText(question.getOptions().get(3));
-		holder.rb5.setText(question.getOptions().get(4));
+		for (int i = 0; i < questions.get(position).getOptions().size(); i++) {
+			RadioButton rdbtn = new RadioButton(context);
 
+			rdbtn.setText(questions.get(position).getOptions().get(i));
+			holder.group.addView(rdbtn);
+		}
 	}
 
 	@Override
@@ -70,11 +72,7 @@ public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.MyView
 			super(view);
 			textQuestion = (TextView) view.findViewById(R.id.questionss);
 			group = (RadioGroup) view.findViewById(R.id.radiogroup);
-			rb1 = (RadioButton)view.findViewById(R.id.rb1);
-			rb2 = (RadioButton)view.findViewById(R.id.rb2);
-			rb3 = (RadioButton)view.findViewById(R.id.rb3);
-			rb4 = (RadioButton)view.findViewById(R.id.rb4);
-			rb5 = (RadioButton)view.findViewById(R.id.rb5);
+
 		}
 	}
 
