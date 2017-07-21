@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+
 import android.widget.Toast;
 
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -24,22 +25,22 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
-import com.google.firebase.auth.TwitterAuthProvider;
+//import com.google.firebase.auth.TwitterAuthProvider;
 import com.google.android.gms.auth.api.Auth;
 import com.twitter.sdk.android.core.Callback;
 import com.twitter.sdk.android.core.DefaultLogger;
 import com.twitter.sdk.android.core.Result;
-import com.twitter.sdk.android.core.Twitter;
-import com.twitter.sdk.android.core.TwitterApiClient;
-import com.twitter.sdk.android.core.TwitterAuthConfig;
-import com.twitter.sdk.android.core.TwitterConfig;
-import com.twitter.sdk.android.core.TwitterCore;
-import com.twitter.sdk.android.core.TwitterException;
-import com.twitter.sdk.android.core.TwitterSession;
-import com.twitter.sdk.android.core.identity.TwitterAuthClient;
+//import com.twitter.sdk.android.core.Twitter;
+//import com.twitter.sdk.android.core.TwitterApiClient;
+//import com.twitter.sdk.android.core.TwitterAuthConfig;
+//import com.twitter.sdk.android.core.TwitterConfig;
+//import com.twitter.sdk.android.core.TwitterCore;
+//import com.twitter.sdk.android.core.TwitterException;
+//import com.twitter.sdk.android.core.TwitterSession;
+//import com.twitter.sdk.android.core.identity.TwitterAuthClient;
 import com.twitter.sdk.android.core.identity.TwitterLoginButton;
 import com.facebook.FacebookSdk;
-import com.facebook.appevents.AppEventsLogger;
+//import com.facebook.appevents.AppEventsLogger;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
@@ -206,7 +207,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 				});
 	}
 
-	private static void requestEmailAddress(final Context context, TwitterSession session) {
+	/*private static void requestEmailAddress(final Context context, TwitterSession session) {
 		new TwitterAuthClient().requestEmail(session, new Callback<String>() {
 			@Override
 			public void success(Result<String> result) {
@@ -218,11 +219,12 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 				Toast.makeText(context, exception.getMessage(), Toast.LENGTH_SHORT).show();
 			}
 		});
-	}
+	}*/
 
 
 	@Override
 	public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
 
 	}
+
 }

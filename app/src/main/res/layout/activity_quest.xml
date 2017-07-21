@@ -28,58 +28,52 @@
             android:paddingTop="2dp">
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/questionss"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="sans-serif-condensed"
-                android:text="How many days of the week do you eat breakfast?"
                 android:textColor="@color/colorPrimary"
                 android:textSize="18sp" />
 
             <RadioButton
-                android:id="@+id/radioButton"
+                android:id="@+id/rb1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Every day"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="14sp"
                 android:textStyle="italic" />
 
             <RadioButton
-                android:id="@+id/radioButton2"
+                android:id="@+id/rb2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="5-6 days a week"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="14sp"
                 android:textStyle="italic" />
 
             <RadioButton
-                android:id="@+id/radioButton3"
+                android:id="@+id/rb3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="3-4 days a week"
                 android:textColor="@color/colorPrimaryDark"
                 android:textStyle="italic" />
 
             <RadioButton
-                android:id="@+id/radioButton4"
+                android:id="@+id/rb4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="1-2 days a week"
                 android:textColor="@color/colorPrimaryDark"
                 android:textStyle="italic" />
 
             <RadioButton
-                android:id="@+id/radioButton5"
+                android:id="@+id/rb5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Never"
                 android:textColor="@color/colorPrimaryDark"
                 android:textStyle="italic" />
 
