@@ -17,6 +17,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 
 import com.google.android.gms.auth.api.signin.GoogleSignInResult;
 import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -49,7 +50,7 @@ import okhttp3.logging.HttpLoggingInterceptor;
 public class MainActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener {
 	private FirebaseAuth mAuth;
 	private FirebaseAuth.AuthStateListener mAuthListener;
-	Button googleLogin;
+	SignInButton googleLogin;
 	GoogleApiClient mGoogleApiClient;
 	//TwitterLoginButton twitterlogin;
 	FirebaseUser user;
@@ -105,7 +106,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 				.addApi(Auth.GOOGLE_SIGN_IN_API, gso)
 				.build();
 
-		googleLogin = (Button) findViewById(R.id.sign_in_button);
+		googleLogin = (SignInButton) findViewById(R.id.sign_in_button);
 		//twitterlogin = (TwitterLoginButton) findViewById(R.id.twt_login_button);
 
 		googleLogin.setOnClickListener(new View.OnClickListener() {
@@ -140,7 +141,10 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 
 
 	}
-
+	public void cardView(View view){
+		Intent q = new Intent(this,questionAcitivity.class);
+		startActivity(q);
+	}
 	@Override
 	public void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
