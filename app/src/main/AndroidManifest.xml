@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="diet.indian.best.indiandiet">
+    package="diet.indian.best.indiandiet">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -13,19 +13,23 @@
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.twitter.sdk.android.core.identity.OAuthActivity"/>
+        <activity android:name="com.twitter.sdk.android.core.identity.OAuthActivity" />
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
-            android:value="@string/facebook_app_id"/>
+            android:value="@string/facebook_app_id" />
 
-        <activity android:name=".questionAcitivity">
-        </activity>
+        <activity android:name=".questionAcitivity"></activity>
+        <activity
+            android:name=".profile"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_profile"
+            android:theme="@style/FullscreenTheme"></activity>
     </application>
 
 </manifest>

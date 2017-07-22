@@ -28,16 +28,6 @@
             android:paddingStart="2dp"
             android:paddingTop="2dp">
 
-            <TextView
-                android:id="@+id/questionss"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:fontFamily="sans-serif-condensed"
-                android:text="Question?"
-                android:textColor="@color/colorPrimary"
-                android:textSize="18sp" />
-
 
         </RadioGroup>
 

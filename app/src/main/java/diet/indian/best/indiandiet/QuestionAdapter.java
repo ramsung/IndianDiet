@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
@@ -48,11 +49,13 @@ public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.MyView
 	@Override
 	public void onBindViewHolder(QuestionAdapter.MyViewHolder holder, int position) {
 		Questions question = questions.get(position);
-		holder.textQuestion.setText(question.getCustquest());
+
 		if(holder.group != null){
 			holder.group.removeAllViews();
 		}
-		holder.group.removeAllViews();
+TextView textquest = new TextView(context);
+		textquest.setText(question.getCustquest());
+		holder.group.addView(textquest);
 		for (int i = 0; i < questions.get(position).getOptions().size(); i++) {
 			RadioButton rdbtn = new RadioButton(context);
 
@@ -67,14 +70,14 @@ public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.MyView
 	}
 
 	public class MyViewHolder extends RecyclerView.ViewHolder {
-		public TextView textQuestion;
+
 		public RadioButton rb1,rb2,rb3,rb4,rb5;
 		public RadioGroup group;
 
 
 		public MyViewHolder(View view) {
 			super(view);
-			textQuestion = (TextView) view.findViewById(R.id.questionss);
+
 			group = (RadioGroup) view.findViewById(R.id.radiogroup);
 
 		}
