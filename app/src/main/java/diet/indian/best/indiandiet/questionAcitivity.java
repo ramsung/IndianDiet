@@ -37,6 +37,7 @@ public class questionAcitivity extends AppCompatActivity {
         ArrayList<String> q18 = new ArrayList<>();
         ArrayList<String> q19 = new ArrayList<>();
         ArrayList<String> q20 = new ArrayList<>();
+		ArrayList<String> q21 = new ArrayList<>();
 
 		RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
 		q1.add("Everyday");
@@ -131,7 +132,11 @@ public class questionAcitivity extends AppCompatActivity {
         q20.add("I become tired very often");
         q20.add("I get tired sometimes");
 
-
+		q21.add("30 min-1 hour");
+		q21.add("1-2 hour");
+		q21.add("More than 2 hours");
+		q21.add("Never");
+		
 		Questions one = new Questions("How many days of the week do you eat breakfast?",q1);
 		Questions two = new Questions("How many portions of coffee do you drink each day?",q2);
 		Questions three = new Questions("How many portions of tea do you drink each day?",q3);
@@ -147,11 +152,12 @@ public class questionAcitivity extends AppCompatActivity {
         Questions thirteen = new Questions("How much litres of Water do you drink?",q13);
         Questions fourteen = new Questions("What kind of Profession are you into?",q14);
         Questions fifteen = new Questions("How much Hours do you work?",q15);
-        Questions sixteen = new Questions("Are you Married?",q16);
+        Questions sixteen = new Questions("Are you diagonised with Blood Pressure[B.P.]?",q16);
         Questions seventeen = new Questions("Do you have Excessive Tummy?",q17);
         Questions eighteen = new Questions("How much direct sunlight on your skin are you exposed to in an average week?",q18);
         Questions nineteen = new Questions("How does your skin look?",q19);
         Questions twenty = new Questions("How are your Energy level?",q20);
+		Questions twentyone = new Questions("Are you travelling by Two-wheeler?",q21);
 
         questionList.add(one);
 		questionList.add(two);
@@ -173,6 +179,7 @@ public class questionAcitivity extends AppCompatActivity {
         questionList.add(eighteen);
         questionList.add(nineteen);
         questionList.add(twenty);
+		questionList.add(twentyone);
 
 		adapter = new QuestionAdapter(questionList,getApplicationContext());
 		recyclerView = (RecyclerView) findViewById(R.id.container);
