@@ -149,6 +149,17 @@
                     android:layout_height="wrap_content"
                     android:text="Question"
                     android:onClick="cardView"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Profile"
+                    android:onClick="cardView"/>
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="profile edit" />
             </LinearLayout>
 
         </android.support.v7.widget.CardView>

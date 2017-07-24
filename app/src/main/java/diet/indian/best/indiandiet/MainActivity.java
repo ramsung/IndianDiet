@@ -144,6 +144,10 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 	public void cardView(View view){
 		Intent q = new Intent(this,questionAcitivity.class);
 		startActivity(q);
+
+		Intent p = new Intent(this,profile.class);
+		startActivity(p);
+
 	}
 	@Override
 	public void onActivityResult(int requestCode, int resultCode, Intent data) {
