@@ -1,9 +1,9 @@
 package diet.indian.best.indiandiet;
 
-import android.content.Intent;
+
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
+
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.

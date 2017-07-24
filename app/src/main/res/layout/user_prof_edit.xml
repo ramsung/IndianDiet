@@ -14,7 +14,8 @@
         android:text="Name"
         android:textColor="@color/colorPrimaryDark"
         tools:layout_editor_absoluteX="7dp"
-        tools:layout_editor_absoluteY="35dp" />
+        tools:layout_editor_absoluteY="35dp"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/editText5"
@@ -25,7 +26,8 @@
         android:inputType="date"
         android:textColor="@color/colorPrimaryDark"
         tools:layout_editor_absoluteX="7dp"
-        tools:layout_editor_absoluteY="84dp" />
+        tools:layout_editor_absoluteY="84dp"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/height"
@@ -36,7 +38,8 @@
         android:inputType="number"
         android:textColor="@color/colorPrimaryDark"
         tools:layout_editor_absoluteX="7dp"
-        tools:layout_editor_absoluteY="136dp" />
+        tools:layout_editor_absoluteY="136dp"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/weight"
@@ -47,7 +50,8 @@
         android:inputType="number"
         android:textColor="@color/colorPrimaryDark"
         tools:layout_editor_absoluteX="7dp"
-        tools:layout_editor_absoluteY="194dp" />
+        tools:layout_editor_absoluteY="194dp"
+        tools:ignore="MissingConstraints"/>
 
     <Spinner
         android:id="@+id/spinner"
@@ -55,7 +59,8 @@
         android:layout_height="wrap_content"
         android:entries="@array/gender"
         tools:layout_editor_absoluteX="82dp"
-        tools:layout_editor_absoluteY="255dp" />
+        tools:layout_editor_absoluteY="255dp"
+        tools:ignore="MissingConstraints"/>
 
     <TextView
         android:id="@+id/textView2"
@@ -65,7 +70,8 @@
         android:textColor="@color/colorPrimaryDark"
         android:textSize="18sp"
         tools:layout_editor_absoluteX="7dp"
-        tools:layout_editor_absoluteY="255dp" />
+        tools:layout_editor_absoluteY="255dp"
+        tools:ignore="MissingConstraints"/>
 
     <TextView
         android:id="@+id/textView3"
@@ -75,7 +81,8 @@
         android:textColor="@color/colorPrimaryDark"
         android:textSize="18sp"
         tools:layout_editor_absoluteX="7dp"
-        tools:layout_editor_absoluteY="298dp" />
+        tools:layout_editor_absoluteY="298dp"
+        tools:ignore="MissingConstraints"/>
 
     <Spinner
         android:id="@+id/spinner2"
@@ -83,6 +90,7 @@
         android:layout_height="wrap_content"
         tools:layout_editor_absoluteX="149dp"
         tools:layout_editor_absoluteY="298dp"
-        android:entries="@array/marital"/>
+        android:entries="@array/marital"
+        tools:ignore="MissingConstraints"/>
 
 </android.support.constraint.ConstraintLayout>

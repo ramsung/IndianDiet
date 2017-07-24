@@ -23,7 +23,7 @@ public class bmi extends AppCompatActivity {
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
         setContentView(R.layout.bmi_activity);
-        final EditText bmi1 = (EditText) findViewById(R.id.height);
+       /* final EditText bmi1 = (EditText) findViewById(R.id.height);
         final EditText bmi2 = (EditText) findViewById(R.id.weight);
         final TextView bmi4 = (TextView) findViewById(R.id.bmiView);
 
@@ -77,7 +77,7 @@ public class bmi extends AppCompatActivity {
             return "Overweight";
         } else {
             return "Obese";
-        }
+        }*/
     }
 }
 

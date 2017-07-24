@@ -150,7 +150,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 		startActivity(p);
 	}
 	public void profedit(View view){
-        Intent u = new Intent(this,profileedit.class);
+        Intent u = new Intent(this, profileedit.class);
         startActivity(u);
 
 	}
