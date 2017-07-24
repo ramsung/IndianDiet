@@ -148,6 +148,9 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 		Intent p = new Intent(this,profile.class);
 		startActivity(p);
 
+        Intent us = new Intent(this,profileedit.class);
+        startActivity(us);
+
 	}
 	@Override
 	public void onActivityResult(int requestCode, int resultCode, Intent data) {
