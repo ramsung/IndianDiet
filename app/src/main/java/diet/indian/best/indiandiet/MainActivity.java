@@ -141,15 +141,17 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 
 
 	}
-	public void cardView(View view){
-		Intent q = new Intent(this,questionAcitivity.class);
+	public void cardView(View view) {
+		Intent q = new Intent(this, questionAcitivity.class);
 		startActivity(q);
-
-		Intent p = new Intent(this,profile.class);
+	}
+	public void profView(View view) {
+		Intent p = new Intent(this, profile.class);
 		startActivity(p);
-
-        Intent us = new Intent(this,profileedit.class);
-        startActivity(us);
+	}
+	public void profedit(View view){
+        Intent u = new Intent(this,profileedit.class);
+        startActivity(u);
 
 	}
 	@Override
