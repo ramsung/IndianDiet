@@ -19,6 +19,27 @@
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintRight_creator="1"
         tools:layout_constraintTop_creator="1">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+            <diet.indian.best.indiandiet.CircleImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:id="@+id/cusimage"
+ android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:layout_margin="20dp"
+                android:src="@drawable/user"/>
+            <ImageView
+                android:layout_width="40dp"
+
+                android:layout_height="40dp"
+                android:id="@+id/editimage"
+                android:layout_marginTop="71dp"
+                android:src="@drawable/editsvg"
+                android:layout_alignRight="@id/cusimage"/>
+        </RelativeLayout>
 
         <EditText
             android:id="@+id/editText3"
@@ -84,27 +105,25 @@
             android:padding="15dp">
 
 
-            <TextView
+            <Button
                 android:id="@+id/male"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
                 android:layout_weight="1"
-                android:fontFamily="casual"
-                android:text="MALE"
-                android:textAlignment="center"
-                android:textIsSelectable="false"
-                android:textColor="@drawable/my_row_selector"/>
+                android:background="@drawable/button_bg"
+                android:elevation="10dp"
+                android:text="Male" />
 
-            <TextView
+            <Button
                 android:id="@+id/female"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
                 android:layout_weight="1"
-                android:fontFamily="casual"
-                android:text="FEMALE"
-                android:textAlignment="center"
-                android:textIsSelectable="false"
-                android:textColor="@drawable/my_row_selector"/>
+                android:background="@drawable/button_bg"
+                android:elevation="10dp"
+                android:text="female" />
         </LinearLayout>
 
         <LinearLayout
@@ -114,26 +133,25 @@
             android:padding="15dp">
 
             <TextView
-                android:id="@+id/male"
+                android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:fontFamily="casual"
-                android:text="MARRIED"
-                android:textAlignment="center"
-                android:textIsSelectable="false"
-                android:textColor="@drawable/my_row_selector"/>
+                android:text="Marital Status"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="7dp"
+                tools:layout_editor_absoluteY="298dp" />
 
-            <TextView
-                android:id="@+id/female"
+            <Spinner
+                android:id="@+id/spinner2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:fontFamily="casual"
-                android:text="UNMARRIED"
-                android:textAlignment="center"
-                android:textIsSelectable="false"
-                android:textColor="@drawable/my_row_selector"/>
+                android:layout_marginStart="25dp"
+                android:entries="@array/marital"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="149dp"
+                tools:layout_editor_absoluteY="298dp" />
 
 
         </LinearLayout>
