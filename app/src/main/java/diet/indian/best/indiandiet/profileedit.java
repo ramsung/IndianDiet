@@ -4,6 +4,10 @@ package diet.indian.best.indiandiet;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
+import static diet.indian.best.indiandiet.R.id.female;
+import static diet.indian.best.indiandiet.R.id.male;
+import static diet.indian.best.indiandiet.R.styleable.View;
+
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
