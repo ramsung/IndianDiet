@@ -3,7 +3,6 @@
     package="diet.indian.best.indiandiet">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -31,6 +30,7 @@
             android:label="@string/title_activity_profile"
             android:theme="@style/FullscreenTheme"></activity>
         <activity android:name=".profileedit"></activity>
+        <activity android:name=".bmi"></activity>
     </application>
 
 </manifest>
