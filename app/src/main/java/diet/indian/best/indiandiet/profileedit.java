@@ -8,31 +8,33 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RadioGroup;
+import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseUser;
 
 import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 
-import static diet.indian.best.indiandiet.R.id.female;
-import static diet.indian.best.indiandiet.R.id.male;
-import static diet.indian.best.indiandiet.R.styleable.View;
-
+import info.hoang8f.android.segmented.SegmentedGroup;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
  * status bar and navigation/system bar) with user interaction.
  */
-public class profileedit extends AppCompatActivity implements View.OnTouchListener {
+public class profileedit extends AppCompatActivity {
     CircleImageView cusimage;
     ImageView edit;
-    Button male,female;
-
+    SegmentedGroup gender;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,11 +52,18 @@ public class profileedit extends AppCompatActivity implements View.OnTouchListen
                 startActivityForResult(i, 1);
             }
         });
-        male = (Button) findViewById(R.id.male);
-        female = (Button) findViewById(R.id.female);
-        male.setOnTouchListener(this);
-        female.setOnTouchListener(this);
 
+        gender = (SegmentedGroup) findViewById(R.id.Gender);
+        gender.setOnCheckedChangeListener(new SegmentedGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, @IdRes int checkedId) {
+                if(R.id.Male == checkedId){
+                    Toast.makeText(getApplicationContext(),"Selected Male",Toast.LENGTH_SHORT).show();
+                }else if(R.id.Female == checkedId){
+                    Toast.makeText(getApplicationContext(),"Selected Female",Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
     }
 
@@ -83,17 +92,5 @@ public class profileedit extends AppCompatActivity implements View.OnTouchListen
 
     }
 
-    @Override
-    public boolean onTouch(View v, MotionEvent event) {
-        int id = v.getId();
-        if(id == R.id.male){
-            male.setPressed(true);
 
-            female.setPressed(false);
-        }else if(id == R.id.female){
-            male.setPressed(false);
-            female.setPressed(true);
-        }
-        return true;
-    }
 }
