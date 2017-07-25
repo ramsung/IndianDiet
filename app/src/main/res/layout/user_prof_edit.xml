@@ -93,8 +93,7 @@
                 android:text="MALE"
                 android:textAlignment="center"
                 android:textIsSelectable="false"
-                android:textColor="@drawable/my_row_selector"
-                />
+                android:textColor="@drawable/my_row_selector"/>
 
             <TextView
                 android:id="@+id/female"
@@ -105,8 +104,7 @@
                 android:text="FEMALE"
                 android:textAlignment="center"
                 android:textIsSelectable="false"
-                android:textColor="@drawable/my_row_selector"
-                />
+                android:textColor="@drawable/my_row_selector"/>
         </LinearLayout>
 
         <LinearLayout
@@ -116,25 +114,26 @@
             android:padding="15dp">
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/male"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Marital Status"
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="18sp"
-                tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteX="7dp"
-                tools:layout_editor_absoluteY="298dp" />
+                android:layout_weight="1"
+                android:fontFamily="casual"
+                android:text="MARRIED"
+                android:textAlignment="center"
+                android:textIsSelectable="false"
+                android:textColor="@drawable/my_row_selector"/>
 
-            <Spinner
-                android:id="@+id/spinner2"
+            <TextView
+                android:id="@+id/female"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="25dp"
-                android:entries="@array/marital"
-                tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteX="149dp"
-                tools:layout_editor_absoluteY="298dp" />
+                android:layout_weight="1"
+                android:fontFamily="casual"
+                android:text="UNMARRIED"
+                android:textAlignment="center"
+                android:textIsSelectable="false"
+                android:textColor="@drawable/my_row_selector"/>
 
 
         </LinearLayout>
