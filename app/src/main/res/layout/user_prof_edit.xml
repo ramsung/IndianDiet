@@ -63,7 +63,7 @@
             android:ems="10"
             android:hint="DOB"
             android:inputType="date"
-            android:padding="15dp"
+            android:padding="10dp"
             android:textAlignment="center"
             android:textColor="@color/colorPrimaryDark"
             tools:ignore="MissingConstraints"
@@ -75,10 +75,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Height (in cms)"
+            android:hint="Height"
             android:inputType="number"
 
-            android:padding="15dp"
+            android:padding="10dp"
             android:textAlignment="center"
             android:textColor="@color/colorPrimaryDark"
             tools:ignore="MissingConstraints"
@@ -90,14 +90,24 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Weight (in Kgs)"
+            android:hint="Weight"
             android:inputType="number"
-            android:padding="15dp"
+            android:padding="10dp"
             android:textAlignment="center"
             android:textColor="@color/colorPrimaryDark"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="7dp"
             tools:layout_editor_absoluteY="194dp" />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Waist"
+            android:inputType="number"
+            android:padding="10dp"
+            android:textAlignment="center" />
 
         <info.hoang8f.android.segmented.SegmentedGroup
             xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
@@ -123,35 +133,61 @@
                 android:text="Female"
                 style="@style/RadioButton" />
         </info.hoang8f.android.segmented.SegmentedGroup>
-        <LinearLayout
-            android:layout_width="match_parent"
+
+        <info.hoang8f.android.segmented.SegmentedGroup
+            android:id="@+id/marital_stat"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:orientation="horizontal"
-            android:padding="15dp">
+            app:sc_border_width="2dp"
+            app:sc_corner_radius="10dp">
 
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
+            <RadioButton
+                android:id="@+id/Married"
+                style="@style/RadioButton"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:text="Marital Status"
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="18sp"
-                tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteX="7dp"
-                tools:layout_editor_absoluteY="298dp" />
+                android:text="Married" />
 
-            <Spinner
-                android:id="@+id/spinner2"
-                android:layout_width="wrap_content"
+            <RadioButton
+                android:id="@+id/Unmarried"
+                style="@style/RadioButton"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="25dp"
-                android:entries="@array/marital"
-                tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteX="149dp"
-                tools:layout_editor_absoluteY="298dp" />
+                android:text="Unmarried" />
+        </info.hoang8f.android.segmented.SegmentedGroup>
 
+        <info.hoang8f.android.segmented.SegmentedGroup
+            android:id="@+id/weightstat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            app:sc_border_width="2dp"
+            app:sc_corner_radius="10dp">
 
-        </LinearLayout>
+            <RadioButton
+                android:id="@+id/Gweight"
+                style="@style/RadioButton"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Weight Gain" />
+
+            <RadioButton
+                android:id="@+id/Lweight"
+                style="@style/RadioButton"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Weight Loss" />
+
+            <RadioButton
+                android:id="@+id/Hweight"
+                style="@style/RadioButton"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Stay Healthy" />
+        </info.hoang8f.android.segmented.SegmentedGroup>
 
     </LinearLayout>
 

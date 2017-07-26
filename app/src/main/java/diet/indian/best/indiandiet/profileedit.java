@@ -34,7 +34,8 @@ import info.hoang8f.android.segmented.SegmentedGroup;
 public class profileedit extends AppCompatActivity {
     CircleImageView cusimage;
     ImageView edit;
-    SegmentedGroup gender;
+    SegmentedGroup gender, marital, wt;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,7 +65,31 @@ public class profileedit extends AppCompatActivity {
                 }
             }
         });
-
+        wt = (SegmentedGroup) findViewById(R.id.weightstat);
+        wt.setOnCheckedChangeListener(new SegmentedGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, @IdRes int checkedId) {
+                if(R.id.Gweight == checkedId){
+                    Toast.makeText(getApplicationContext(),"Woww You Wanna Gain Some Weight",Toast.LENGTH_SHORT).show();
+                }else if(R.id.Lweight == checkedId){
+                    Toast.makeText(getApplicationContext(),"Woww You Wanna Reduce Some Weight",Toast.LENGTH_SHORT).show();
+                }
+                else if(R.id.Hweight == checkedId){
+                    Toast.makeText(getApplicationContext(),"Hurray!! Staying Healthy is best choice!",Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        marital = (SegmentedGroup) findViewById(R.id.marital_stat);
+        marital.setOnCheckedChangeListener(new SegmentedGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, @IdRes int checkedId) {
+                if(R.id.Married == checkedId){
+                    Toast.makeText(getApplicationContext(),"Selected Married",Toast.LENGTH_SHORT).show();
+                }else if(R.id.Unmarried == checkedId){
+                    Toast.makeText(getApplicationContext(),"Selected Unmarried",Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
 
     @Override
