@@ -31,4 +31,5 @@
         <item>Unmarried</item>
     </string-array>
     <string name="title_activity_recipe_layout">recipe_layout</string>
+    <string name="title_activity_maps">Map</string>
 </resources>
