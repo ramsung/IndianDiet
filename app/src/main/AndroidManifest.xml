@@ -3,6 +3,7 @@
     package="diet.indian.best.indiandiet">
 
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -23,14 +24,19 @@
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
 
-        <activity android:name=".questionAcitivity"></activity>
+        <activity android:name=".questionAcitivity" />
         <activity
             android:name=".profile"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_profile"
-            android:theme="@style/FullscreenTheme"></activity>
-        <activity android:name=".profileedit"></activity>
-        <activity android:name=".bmi"></activity>
+            android:theme="@style/FullscreenTheme" />
+        <activity android:name=".profileedit" />
+        <activity android:name=".bmi" />
+
+        <activity android:name=".GridViewImageTextActivity"/>
+
+
+
     </application>
 
 </manifest>

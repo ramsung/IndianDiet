@@ -11,40 +11,45 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="-35dp"
         android:gravity="center"
         android:orientation="vertical"
-        android:padding="25dp"
+        android:padding="5dp"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintRight_creator="1"
         tools:layout_constraintTop_creator="1">
+
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center">
+
             <diet.indian.best.indiandiet.CircleImageView
+                android:id="@+id/cusimage"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
-                android:id="@+id/cusimage"
- android:layout_centerHorizontal="true"
+                android:layout_centerHorizontal="true"
                 android:layout_centerInParent="true"
-                android:layout_margin="20dp"
-                android:src="@drawable/user"/>
-            <ImageView
-                android:layout_width="40dp"
+                android:layout_margin="15dp"
+                android:src="@drawable/user" />
 
-                android:layout_height="40dp"
+            <ImageView
                 android:id="@+id/editimage"
+
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignRight="@id/cusimage"
                 android:layout_marginTop="71dp"
-                android:src="@drawable/editsvg"
-                android:layout_alignRight="@id/cusimage"/>
+                android:src="@drawable/editsvg" />
         </RelativeLayout>
 
         <EditText
             android:id="@+id/editText3"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Name"
@@ -58,11 +63,11 @@
 
         <EditText
             android:id="@+id/editText5"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="DOB"
-            android:inputType="date"
+            android:hint="Age"
+            android:inputType="number"
             android:padding="10dp"
             android:textAlignment="center"
             android:textColor="@color/colorPrimaryDark"
@@ -72,7 +77,7 @@
 
         <EditText
             android:id="@+id/height"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Height"
@@ -87,7 +92,7 @@
 
         <EditText
             android:id="@+id/weight"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Weight"
@@ -101,7 +106,7 @@
 
         <EditText
             android:id="@+id/editText"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Waist"
@@ -109,8 +114,7 @@
             android:padding="10dp"
             android:textAlignment="center" />
 
-        <info.hoang8f.android.segmented.SegmentedGroup
-            xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+        <info.hoang8f.android.segmented.SegmentedGroup xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
             android:id="@+id/Gender"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -121,17 +125,17 @@
 
             <RadioButton
                 android:id="@+id/Male"
+                style="@style/RadioButton"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:text="Male"
-                style="@style/RadioButton" />
+                android:text="Male" />
 
             <RadioButton
                 android:id="@+id/Female"
+                style="@style/RadioButton"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:text="Female"
-                style="@style/RadioButton" />
+                android:text="Female" />
         </info.hoang8f.android.segmented.SegmentedGroup>
 
         <info.hoang8f.android.segmented.SegmentedGroup

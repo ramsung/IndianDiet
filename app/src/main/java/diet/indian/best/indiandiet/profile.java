@@ -27,4 +27,8 @@ public class profile extends AppCompatActivity {
         Intent bm = new Intent(this, bmi.class);
         startActivity(bm);
     }
+    public void im2(View view) {
+        Intent rl = new Intent(this, CustomGridViewActivity.class);
+        startActivity(rl);
+    }
 }

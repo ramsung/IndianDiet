@@ -30,4 +30,5 @@
         <item>Married</item>
         <item>Unmarried</item>
     </string-array>
+    <string name="title_activity_recipe_layout">recipe_layout</string>
 </resources>
