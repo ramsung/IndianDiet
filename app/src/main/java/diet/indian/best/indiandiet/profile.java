@@ -1,12 +1,8 @@
 package diet.indian.best.indiandiet;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.os.Handler;
-import android.view.MotionEvent;
 import android.view.View;
 
 /**
@@ -27,8 +23,5 @@ public class profile extends AppCompatActivity {
         Intent bm = new Intent(this, bmi.class);
         startActivity(bm);
     }
-    public void im2(View view) {
-        Intent rl = new Intent(this, CustomGridViewActivity.class);
-        startActivity(rl);
-    }
+
 }

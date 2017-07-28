@@ -39,8 +39,6 @@
             android:theme="@style/FullscreenTheme" />
         <activity android:name=".profileedit" />
         <activity android:name=".bmi" />
-        <activity android:name=".GridViewImageTextActivity" />
-        <activity android:name=".running" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -49,13 +47,11 @@
              sign the APK for publishing.
              You can define the keys for the debug and release targets in src/debug/ and src/release/. 
         -->
-        <meta-data
+        <!--<meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
+            android:value="@string/google_maps_key" />-->
 
-        <activity
-            android:name=".MapsActivity"
-            android:label="@string/title_activity_maps" />
+
     </application>
 
 </manifest>
