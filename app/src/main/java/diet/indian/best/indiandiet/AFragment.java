@@ -30,12 +30,19 @@ public class AFragment extends Fragment
         View personal = inflater.inflate(R.layout.personal, container, false);
         View social = inflater.inflate(R.layout.social, container, false);
         View nearme = inflater.inflate(R.layout.nearme, container, false);
+        View profile = inflater.inflate(R.layout.profile, container, false);
+        View store = inflater.inflate(R.layout.store, container, false);
+
         if(Integer.parseInt(content) == 0){
             return personal;
         }else if (Integer.parseInt(content) == 1){
             return social;
         }else if (Integer.parseInt(content) == 2){
             return nearme;
+        }else if (Integer.parseInt(content) == 3){
+            return profile;
+        }else if (Integer.parseInt(content) == 4){
+            return store;
         }
         TextView textView = new TextView(getContext());
         textView.setTextSize(30);

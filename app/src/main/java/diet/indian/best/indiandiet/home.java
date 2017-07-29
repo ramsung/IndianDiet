@@ -29,7 +29,7 @@ import static diet.indian.best.indiandiet.R.id.tab;
 public class home extends AppCompatActivity {
     int[] testColors = {0xFF455A64, 0xFF00796B, 0xFF795548, 0xFF5B4947, 0xFFF57C00};
 //    int[] testColors = {0xFF009688, 0xFF009688, 0xFF009688, 0xFF009688, 0xFF009688};
-
+Toolbar toolbar;
     NavigationController mNavigationController;
 
     @Override
@@ -37,8 +37,9 @@ public class home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-      /*  Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);*/
+       toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        toolbar.setTitle("Indian Diet");
 
         PageBottomTabLayout pageBottomTabLayout = (PageBottomTabLayout) findViewById(R.id.tab);
 
@@ -55,7 +56,7 @@ public class home extends AppCompatActivity {
                 .build();
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewPager);
         viewPager.setAdapter(new MyViewPagerAdapter(getSupportFragmentManager(),mNavigationController.getItemCount()));
-
+        toolbar.setBackgroundColor(testColors[0]);
         //自动适配ViewPager页面切换
         mNavigationController.setupWithViewPager(viewPager);
 
@@ -64,6 +65,7 @@ public class home extends AppCompatActivity {
             @Override
             public void onSelected(int index, int old) {
                 Log.i("asd","selected: " + index + " old: " + old);
+                toolbar.setBackgroundColor(testColors[index]);
             }
 
             @Override
