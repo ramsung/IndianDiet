@@ -43,6 +43,7 @@ public class home extends AppCompatActivity {
         PageBottomTabLayout pageBottomTabLayout = (PageBottomTabLayout) findViewById(R.id.tab);
 
 
+
         mNavigationController = pageBottomTabLayout.material()
                 .addItem(R.drawable.myacc,"Personal",testColors[0])
                 .addItem(R.drawable.socialacc,"Social",testColors[1])

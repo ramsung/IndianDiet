@@ -27,6 +27,16 @@ public class AFragment extends Fragment
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
     {
         String content = getArguments().getString(ARG_C);
+        View personal = inflater.inflate(R.layout.personal, container, false);
+        View social = inflater.inflate(R.layout.social, container, false);
+        View nearme = inflater.inflate(R.layout.nearme, container, false);
+        if(Integer.parseInt(content) == 0){
+            return personal;
+        }else if (Integer.parseInt(content) == 1){
+            return social;
+        }else if (Integer.parseInt(content) == 2){
+            return nearme;
+        }
         TextView textView = new TextView(getContext());
         textView.setTextSize(30);
         textView.setGravity(Gravity.CENTER);
