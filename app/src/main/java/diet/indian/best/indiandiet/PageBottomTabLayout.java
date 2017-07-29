@@ -267,7 +267,7 @@ public class PageBottomTabLayout extends ViewGroup
          * @param chekedColor       选中的颜色
          * @return  {@link MaterialBuilder}
          */
-        public MaterialBuilder addItem(@DrawableRes int drawable,@DrawableRes int checkedDrawable,String title,@ColorInt int chekedColor){
+      /*  public MaterialBuilder addItem(@DrawableRes int drawable,@DrawableRes int checkedDrawable,String title,@ColorInt int chekedColor){
 
             MaterialItemView itemView = new MaterialItemView(getContext());
             itemView.setCheckedColor(chekedColor);
