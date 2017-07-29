@@ -1,11 +1,6 @@
 <resources xmlns:android="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">Indian Diet</string>
-    <string name="twitter_consumer_key" translatable="false">TNZXRkBN9yej8n0icgWsnh8zX
-</string>
-    <string name="twitter_consumer_secret" translatable="false">IBebQWR3mcalHHkwBu4AUPTJG6pFMVeDgpHNCB7Si518PxiQH1
-</string>
-    <string android:name="com.twitter.sdk.android.CONSUMER_KEY">TNZXRkBN9yej8n0icgWsnh8zX</string>
-    <string android:name="com.twitter.sdk.android.CONSUMER_SECRET">IBebQWR3mcalHHkwBu4AUPTJG6pFMVeDgpHNCB7Si518PxiQH1</string>
+
     <string name="facebook_app_id">504355006568401</string>
 
     <string name="title_activity_quest">quest</string>

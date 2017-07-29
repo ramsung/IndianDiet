@@ -239,5 +239,8 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 	public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
 
 	}
-
+	public void Home(View v){
+		Intent home = new Intent(this,home.class);
+		startActivity(home);
+	}
 }
