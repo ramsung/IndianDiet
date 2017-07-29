@@ -17,8 +17,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-
-            app:layout_scrollFlags="scroll|enterAlways"/>
+            app:layout_scrollFlags="snap|enterAlways"/>
 
     </android.support.design.widget.AppBarLayout>
 
@@ -26,6 +25,7 @@
                     android:id="@+id/activity_material_design"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginTop="?attr/actionBarSize"
                     style="@style/Base.Theme.AppCompat.Light.DarkActionBar">
 
         <android.support.v4.view.ViewPager
