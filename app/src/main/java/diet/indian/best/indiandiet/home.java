@@ -44,9 +44,11 @@ public class home extends AppCompatActivity {
 
 
         mNavigationController = pageBottomTabLayout.material()
-                .addItem(R.drawable.myacc,"Personal",testColors[0])
+                .addItem(R.drawable.man,"Personal",testColors[0])
                 .addItem(R.drawable.socialacc,"Social",testColors[1])
-                .addItem(R.drawable.nearme,"Nearby",testColors[2])
+                .addItem(R.drawable.nearme,"Near Me",testColors[2])
+                .addItem(R.drawable.myacc,"Profile",testColors[3])
+                .addItem(R.drawable.shopping_cart,"Store",testColors[4])
                 .setMode(MaterialMode.CHANGE_BACKGROUND_COLOR | MaterialMode.HIDE_TEXT)
                 .setDefaultColor(0x89FFFFFF)
                 .build();
