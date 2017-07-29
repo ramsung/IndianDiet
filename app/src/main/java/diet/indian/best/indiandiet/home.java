@@ -17,6 +17,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import me.majiajie.pagerbottomtabstrip.*;
 import me.majiajie.pagerbottomtabstrip.NavigationController;
 import me.majiajie.pagerbottomtabstrip.listener.*;
@@ -80,76 +83,36 @@ public class home extends AppCompatActivity {
             }
         }
     }
+    public class SectionsPagerAdapter extends FragmentPagerAdapter {
+        private final List<Fragment> mFragmentList = new ArrayList<>();
+        private final List<String> mFragmentTitleList = new ArrayList<>();
 
-
-
-    private class TestViewPagerAdapter extends FragmentPagerAdapter {
-
-        public TestViewPagerAdapter(FragmentManager fm) {
+        public SectionsPagerAdapter(FragmentManager fm) {
             super(fm);
         }
 
         @Override
         public Fragment getItem(int position) {
-            TestFragment fragment = new TestFragment();
-            fragment.setListListener(new ListScrollListener());
-            return fragment;
+            return mFragmentList.get(position);
         }
 
         @Override
         public int getCount() {
-            return mNavigationController.getItemCount();
+            return mFragmentList.size();
+        }
+
+        public void addFragment(Fragment fragment, String title) {
+            mFragmentList.add(fragment);
+            mFragmentTitleList.add(title);
+        }
+
+        @Override
+        public CharSequence getPageTitle(int position) {
+            return mFragmentTitleList.get(position);
         }
     }
 
-    public static class TestFragment extends Fragment{
 
-        RecyclerView.OnScrollListener listListener;
 
-        @Nullable
-        @Override
-        public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-            return inflater.inflate(R.layout.recyclerview,container,false);
-        }
 
-        @Override
-        public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-            RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
-            recyclerView.setAdapter(new TestAdapter());
-            recyclerView.addItemDecoration(new DividerItemDecoration(view.getContext(),DividerItemDecoration.VERTICAL));
-            recyclerView.addOnScrollListener(listListener);
-
-        }
-
-        public void setListListener(RecyclerView.OnScrollListener listListener) {
-            this.listListener = listListener;
-        }
-    }
-
-    private static class TestAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
-
-        @Override
-        public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            int padding = (int) TypedValue.applyDimension(
-                    TypedValue.COMPLEX_UNIT_DIP, 16, parent.getResources().getDisplayMetrics());
-            TextView textView = new TextView(parent.getContext());
-            textView.setPadding(padding,padding,padding,padding);
-            textView.setTextSize(TypedValue.COMPLEX_UNIT_SP,14);
-
-            return new RecyclerView.ViewHolder(textView) {};
-        }
-
-        @Override
-        public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-
-            if(holder.itemView instanceof TextView){
-                ((TextView) holder.itemView).setText(String.valueOf(position));
-            }
-        }
-
-        @Override
-        public int getItemCount() {
-            return 100;
-        }
-    }
 }
