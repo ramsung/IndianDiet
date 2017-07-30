@@ -4,6 +4,7 @@ package diet.indian.best.indiandiet;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Gravity;
@@ -15,6 +16,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+import diet.indian.best.indiandiet.adapters.activityadapter;
 import diet.indian.best.indiandiet.model.OrderStatus;
 import diet.indian.best.indiandiet.model.Orientation;
 import diet.indian.best.indiandiet.model.TimeLineModel;
@@ -27,6 +29,7 @@ public class AFragment extends Fragment
     private List<TimeLineModel> mDataList = new ArrayList<>();
     private Orientation mOrientation;
     private boolean mWithLinePadding;
+    RecyclerView rv;
     public static AFragment newInstance(String content) {
         Bundle args = new Bundle();
         args.putString(ARG_C,content);
@@ -64,6 +67,13 @@ public class AFragment extends Fragment
         }else if (Integer.parseInt(content) == 3){
             return profile;
         }else if (Integer.parseInt(content) == 4){
+            rv = (RecyclerView) store.findViewById(R.id.rv);
+            activityadapter adapter = new activityadapter(getContext(),9);
+            rv.setAdapter(adapter);
+            GridLayoutManager layoutManager = new GridLayoutManager(getContext(), 3);
+            rv.setLayoutManager(layoutManager);
+            adapter.notifyDataSetChanged();
+
             return store;
         }
         TextView textView = new TextView(getContext());

@@ -1,5 +1,6 @@
 package diet.indian.best.indiandiet;
 
+import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -16,6 +17,7 @@ import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -29,26 +31,31 @@ import me.majiajie.pagerbottomtabstrip.NavigationController;
 import me.majiajie.pagerbottomtabstrip.listener.*;
 
 import static diet.indian.best.indiandiet.R.id.tab;
+import static diet.indian.best.indiandiet.R.id.viewPager;
 
 public class home extends AppCompatActivity {
 
-    int[] testColors = {0xFF455A64, 0xFF00796B, 0xFF795548, 0xFF5B4947, 0xFFF57C00};
+    int[] testColors = {0xFF455A64, 0xFF00796B, 0xFF795548, 0xFF5B4947, Color.parseColor("#424141")};
 //    int[] testColors = {0xFF009688, 0xFF009688, 0xFF009688, 0xFF009688, 0xFF009688};
 Toolbar toolbar;
     NavigationController mNavigationController;
     public final static String EXTRA_ORIENTATION = "EXTRA_ORIENTATION";
     public final static String EXTRA_WITH_LINE_PADDING = "EXTRA_WITH_LINE_PADDING";
+    public RelativeLayout layout;
+    PageBottomTabLayout pageBottomTabLayout;
+    ViewPager viewPager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
+       layout = (RelativeLayout) findViewById(R.id.activity_material_design);
        toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         toolbar.setTitle("Indian Diet");
+        toolbar.setTitleTextColor(Color.parseColor("#ffffff"));
         getIntent().putExtra(EXTRA_ORIENTATION, Orientation.VERTICAL);
         getIntent().putExtra(EXTRA_WITH_LINE_PADDING, false);
-        PageBottomTabLayout pageBottomTabLayout = (PageBottomTabLayout) findViewById(R.id.tab);
+        pageBottomTabLayout = (PageBottomTabLayout) findViewById(R.id.tab);
 
 
 
@@ -61,7 +68,7 @@ Toolbar toolbar;
                 .setMode(MaterialMode.CHANGE_BACKGROUND_COLOR | MaterialMode.HIDE_TEXT)
                 .setDefaultColor(0x89FFFFFF)
                 .build();
-        ViewPager viewPager = (ViewPager) findViewById(R.id.viewPager);
+        viewPager = (ViewPager) findViewById(R.id.viewPager);
         viewPager.setAdapter(new MyViewPagerAdapter(getSupportFragmentManager(),mNavigationController.getItemCount()));
         toolbar.setBackgroundColor(testColors[0]);
 
@@ -71,7 +78,7 @@ Toolbar toolbar;
             @Override
             public void onSelected(int index, int old) {
                 Log.i("asd","selected: " + index + " old: " + old);
-                toolbar.setBackgroundColor(testColors[index]);
+                 toolbar.setBackgroundColor(testColors[index]);
             }
 
             @Override
@@ -122,6 +129,8 @@ Toolbar toolbar;
             return mFragmentTitleList.get(position);
         }
     }
-
+public int getLayout(){
+    return layout.getHeight();
+}
 
 }

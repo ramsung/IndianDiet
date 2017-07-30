@@ -43,7 +43,7 @@ Toolbar toolbar;
         mNavigationController = pageBottomTabLayout.material()
                 .addItem(R.drawable.run,"Run",testColors[0])
                 .addItem(R.drawable.race,"Race",testColors[1])
-                .addItem(R.drawable.records,"Records",testColors[2])
+                .addItem(R.drawable.record,"Records",testColors[2])
 
                 .setMode(MaterialMode.CHANGE_BACKGROUND_COLOR | MaterialMode.HIDE_TEXT)
                 .setDefaultColor(0x89FFFFFF)
