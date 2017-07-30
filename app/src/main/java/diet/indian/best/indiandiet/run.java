@@ -1,36 +1,24 @@
 package diet.indian.best.indiandiet;
 
-import android.graphics.drawable.GradientDrawable;
-import android.support.annotation.Nullable;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.util.TypedValue;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import diet.indian.best.indiandiet.model.OrderStatus;
 import diet.indian.best.indiandiet.model.Orientation;
-import diet.indian.best.indiandiet.model.TimeLineModel;
-import me.majiajie.pagerbottomtabstrip.*;
+import me.majiajie.pagerbottomtabstrip.MaterialMode;
 import me.majiajie.pagerbottomtabstrip.NavigationController;
-import me.majiajie.pagerbottomtabstrip.listener.*;
+import me.majiajie.pagerbottomtabstrip.PageBottomTabLayout;
 
-import static diet.indian.best.indiandiet.R.id.tab;
-
-public class home extends AppCompatActivity {
+public class run extends AppCompatActivity {
 
     int[] testColors = {0xFF455A64, 0xFF00796B, 0xFF795548, 0xFF5B4947, 0xFFF57C00};
 //    int[] testColors = {0xFF009688, 0xFF009688, 0xFF009688, 0xFF009688, 0xFF009688};
@@ -41,7 +29,7 @@ Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_run);
 
        toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -53,11 +41,10 @@ Toolbar toolbar;
 
 
         mNavigationController = pageBottomTabLayout.material()
-                .addItem(R.drawable.man,"Personal",testColors[0])
-                .addItem(R.drawable.socialacc,"Social",testColors[1])
-                .addItem(R.drawable.nearme,"Near Me",testColors[2])
-                .addItem(R.drawable.myacc,"Profile",testColors[3])
-                .addItem(R.drawable.activity,"Activity",testColors[4])
+                .addItem(R.drawable.run,"Run",testColors[0])
+                .addItem(R.drawable.race,"Race",testColors[1])
+                .addItem(R.drawable.records,"Records",testColors[2])
+
                 .setMode(MaterialMode.CHANGE_BACKGROUND_COLOR | MaterialMode.HIDE_TEXT)
                 .setDefaultColor(0x89FFFFFF)
                 .build();

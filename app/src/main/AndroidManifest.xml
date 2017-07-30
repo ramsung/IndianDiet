@@ -40,6 +40,8 @@
         <activity android:name=".profileedit" />
         <activity android:name=".bmi" />
         <activity android:name=".home"></activity>
+        <activity android:name=".run"></activity>
+
     </application>
 
 </manifest>

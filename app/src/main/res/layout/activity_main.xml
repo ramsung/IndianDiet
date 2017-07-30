@@ -6,7 +6,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="diet.indian.best.indiandiet.MainActivity">
-
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
@@ -168,11 +170,19 @@
                     android:text="Home"
                     android:onClick="Home"/>
 
+                <Button
+
+                    android:id="@+id/button2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="Runtrack"
+                    android:text="Run" />
+
 
             </LinearLayout>
 
 
         </android.support.v7.widget.CardView>
     </LinearLayout>
-
+</ScrollView>
 </android.support.v7.widget.LinearLayoutCompat>

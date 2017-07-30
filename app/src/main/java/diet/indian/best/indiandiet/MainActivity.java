@@ -243,4 +243,8 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 		Intent home = new Intent(this,home.class);
 		startActivity(home);
 	}
+	public void Runtrack(View v){
+		Intent run = new Intent(this,run.class);
+		startActivity(run);
+	}
 }
