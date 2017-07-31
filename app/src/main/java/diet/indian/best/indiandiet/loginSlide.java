@@ -13,13 +13,13 @@ import agency.tango.materialintroscreen.SlideFragment;
  * Created by RK on 7/31/2017.
  */
 
-public class ProfileSlide extends SlideFragment {
+public class loginSlide extends SlideFragment {
     private CheckBox checkBox;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        final View view = inflater.inflate(R.layout.user_prof_edit, container, false);
+        final View view = inflater.inflate(R.layout.activity_main, container, false);
        // checkBox = (CheckBox) view.findViewById(R.id.radiogroup);
         return view;
     }

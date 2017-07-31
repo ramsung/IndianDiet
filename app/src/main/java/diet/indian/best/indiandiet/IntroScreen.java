@@ -40,14 +40,16 @@ public class IntroScreen extends MaterialIntroActivity {
                     }
                 }, "Work with love"));
 
-        addSlide(new SlideFragmentBuilder()
+        addSlide(new loginSlide());
+        addSlide(new ProfileSlide());
+        addSlide(new MedicalSlide());
+
+        /*addSlide(new SlideFragmentBuilder()
                 .backgroundColor(R.color.green_700)
                 .buttonsColor(R.color.red_500)
                 .title("Want more?")
                 .description("Go on")
-                .build());
-
-        addSlide(new ProfileSlide());
+                .build());*/
 
         addSlide(new SlideFragmentBuilder()
                         .backgroundColor(R.color.black)

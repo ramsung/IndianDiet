@@ -56,7 +56,7 @@
             android:inputType="textPersonName"
             android:padding="15dp"
             android:textAlignment="center"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="@android:color/white"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="7dp"
             tools:layout_editor_absoluteY="35dp" />
@@ -70,7 +70,7 @@
             android:inputType="number"
             android:padding="10dp"
             android:textAlignment="center"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="@android:color/white"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="7dp"
             tools:layout_editor_absoluteY="84dp" />
@@ -85,7 +85,7 @@
 
             android:padding="10dp"
             android:textAlignment="center"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="@android:color/white"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="7dp"
             tools:layout_editor_absoluteY="136dp" />
@@ -99,7 +99,7 @@
             android:inputType="number"
             android:padding="10dp"
             android:textAlignment="center"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="@android:color/white"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="7dp"
             tools:layout_editor_absoluteY="194dp" />
@@ -112,7 +112,8 @@
             android:hint="Waist"
             android:inputType="number"
             android:padding="10dp"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:textColor="@android:color/white" />
 
         <info.hoang8f.android.segmented.SegmentedGroup xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
             android:id="@+id/Gender"
