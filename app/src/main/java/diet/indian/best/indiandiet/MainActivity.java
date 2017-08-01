@@ -2,7 +2,9 @@ package diet.indian.best.indiandiet;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.StrictMode;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -184,9 +186,9 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 
 
 		} else {
-
-
 		}
+
+
 	}
 
 	private void firebaseAuthWithGoogle(final GoogleSignInAccount acct) {
@@ -251,4 +253,5 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 		Intent intro = new Intent(this,IntroScreen.class);
 		startActivity(intro);
 	}
+
 }
