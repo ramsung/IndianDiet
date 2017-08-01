@@ -26,12 +26,12 @@ public class MedicalSlide extends SlideFragment {
 
     @Override
     public int backgroundColor() {
-        return R.color.pink_900;
+        return R.color.green_400;
     }
 
     @Override
     public int buttonsColor() {
-        return R.color.black;
+        return R.color.red_400;
     }
 
     /*@Override

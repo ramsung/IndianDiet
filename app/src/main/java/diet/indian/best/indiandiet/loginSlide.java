@@ -19,19 +19,19 @@ public class loginSlide extends SlideFragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        final View view = inflater.inflate(R.layout.activity_main, container, false);
-       // checkBox = (CheckBox) view.findViewById(R.id.radiogroup);
+        final View view = inflater.inflate(R.layout.login, container, false);
+
         return view;
     }
 
     @Override
     public int backgroundColor() {
-        return R.color.pink_900;
+        return R.color.black_overlay;
     }
 
     @Override
     public int buttonsColor() {
-        return R.color.black;
+        return R.color.red_400;
     }
 
     /*@Override
