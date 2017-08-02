@@ -1,6 +1,8 @@
 package diet.indian.best.indiandiet;
 
 import android.os.Bundle;
+import android.os.PersistableBundle;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -10,19 +12,26 @@ import android.widget.NumberPicker;
 import android.widget.TextView;
 
 
+
+
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
  * status bar and navigation/system bar) with user interaction.
  */
 public class bmi extends AppCompatActivity {
 
-
+    GaugeView gaugeView;
     @Override
-    protected void onPostCreate(Bundle savedInstanceState) {
-        super.onPostCreate(savedInstanceState);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.bmi_activity);
+        gaugeView = (GaugeView) findViewById(R.id.gaugeview);
 
+
+        //gaugeView.setTargetValue(25f);
     }
+
+
 
     public void calculate(View v) {
         if(v.getId() == R.id.calculatebmi) {
@@ -37,8 +46,10 @@ public class bmi extends AppCompatActivity {
             float bmiValue = calculateBMI(weight, height);
 
             String bmiInterpretation = interpretBMI(bmiValue);
-
+            gaugeView.setTargetValue(bmiValue);
             resultText.setText(bmiValue + " - " + bmiInterpretation);
+
+
             //resultText.setText(bmiInterpretation);
 
         }
