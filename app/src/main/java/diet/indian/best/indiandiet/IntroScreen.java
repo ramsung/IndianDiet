@@ -51,7 +51,7 @@ public class IntroScreen extends MaterialIntroActivity {
                 .description("Go on")
                 .build());*/
 
-        addSlide(new SlideFragmentBuilder()
+       /* addSlide(new SlideFragmentBuilder()
                         .backgroundColor(R.color.black)
                         .buttonsColor(R.color.blue_600)
                         .possiblePermissions(new String[]{Manifest.permission.CALL_PHONE, Manifest.permission.READ_SMS})
@@ -65,7 +65,7 @@ public class IntroScreen extends MaterialIntroActivity {
                     public void onClick(View v) {
                         showMessage("Try us!");
                     }
-                }, "Tools"));
+                }, "Tools"));*/
 
         addSlide(new SlideFragmentBuilder()
                 .backgroundColor(R.color.teal_600)
