@@ -1,17 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                 xmlns:app="http://schemas.android.com/apk/res-auto"
+android:background="@color/amber_100"
+                                                 xmlns:ads="http://schemas.android.com/apk/res-auto"
+
+                                                 xmlns:tools="http://schemas.android.com/tools"
+                                                 android:layout_width="match_parent"
+                                                 android:layout_height="match_parent">
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
     xmlns:app="http://schemas.android.com/apk/res-auto"
+
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
 
               android:layout_height="wrap_content"
               android:orientation="horizontal">
-    <diet.indian.best.indiandiet.GaugeView
+    <RelativeLayout
         android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_height="150dp">
+        <pl.pawelkleczkowski.customgauge.CustomGauge
+            android:id="@+id/gauge2"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
 
-        android:id="@+id/gaugeview"/>
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            app:gaugeEndValue="40"
+            app:gaugeStartAngle="135"
+            app:gaugeStartValue="0"
+
+            app:gaugeStrokeCap="ROUND"
+            app:gaugeStrokeColor="@color/tw__light_gray"
+            app:gaugeStrokeWidth="10dp"
+            app:gaugeSweepAngle="270" />
+        <TextView
+            android:id="@+id/bmiText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/gauge2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="48dp"
+            android:text="0"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
 
     <TableLayout
         android:layout_width="match_parent"
@@ -102,3 +138,4 @@
     </TableLayout>
 
 </LinearLayout>
+    </android.support.design.widget.CoordinatorLayout>

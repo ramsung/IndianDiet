@@ -1,5 +1,6 @@
 package diet.indian.best.indiandiet;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
@@ -11,7 +12,7 @@ import android.widget.EditText;
 import android.widget.NumberPicker;
 import android.widget.TextView;
 
-
+import pl.pawelkleczkowski.customgauge.CustomGauge;
 
 
 /**
@@ -20,12 +21,14 @@ import android.widget.TextView;
  */
 public class bmi extends AppCompatActivity {
 
-    GaugeView gaugeView;
+    CustomGauge gauge;
+    TextView bmiText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.bmi_activity);
-        gaugeView = (GaugeView) findViewById(R.id.gaugeview);
+        gauge = (CustomGauge) findViewById(R.id.gauge2);
+        bmiText = (TextView) findViewById(R.id.bmiText);
 
 
         //gaugeView.setTargetValue(25f);
@@ -36,7 +39,7 @@ public class bmi extends AppCompatActivity {
     public void calculate(View v) {
         if(v.getId() == R.id.calculatebmi) {
             EditText heightText = (EditText) findViewById(R.id.heightbmi);
-            TextView resultText = (TextView) findViewById(R.id.resultbmi);
+            //TextView resultText = (TextView) findViewById(R.id.resultbmi);
 
             EditText weightText = (EditText) findViewById(R.id.weightbmi);
 
@@ -46,8 +49,10 @@ public class bmi extends AppCompatActivity {
             float bmiValue = calculateBMI(weight, height);
 
             String bmiInterpretation = interpretBMI(bmiValue);
-            gaugeView.setTargetValue(bmiValue);
-            resultText.setText(bmiValue + " - " + bmiInterpretation);
+
+            gauge.setValue((int) bmiValue);
+            bmiText.setText(String.valueOf((int)bmiValue));
+
 
 
             //resultText.setText(bmiInterpretation);
@@ -61,14 +66,29 @@ public class bmi extends AppCompatActivity {
 
     private String interpretBMI(float bmiValue) {
         if(bmiValue < 16) {
+            gauge.setPointEndColor(Color.RED);
+            gauge.setPointStartColor(Color.RED);
+
             return "Severely underweight";
         } else if(bmiValue < 18.5) {
+            gauge.setPointEndColor(Color.YELLOW);
+            gauge.setPointStartColor(Color.YELLOW);
+
             return "Underweight";
         } else if(bmiValue < 25) {
+            gauge.setPointEndColor(Color.GREEN);
+            gauge.setPointStartColor(Color.GREEN);
+
             return "Normal";
         } else if(bmiValue < 30) {
+            gauge.setPointEndColor(Color.YELLOW);
+            gauge.setPointStartColor(Color.YELLOW);
+
             return "Overweight";
         } else {
+            gauge.setPointEndColor(Color.RED);
+            gauge.setPointStartColor(Color.RED);
+
             return "Obese";
         }
     }
