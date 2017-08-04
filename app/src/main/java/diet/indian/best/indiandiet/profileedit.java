@@ -1,12 +1,15 @@
 package diet.indian.best.indiandiet;
 
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
@@ -59,9 +62,15 @@ public class profileedit extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup group, @IdRes int checkedId) {
                 if(R.id.Male == checkedId){
-                    Toast.makeText(getApplicationContext(),"Selected Male",Toast.LENGTH_SHORT).show();
+                    SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+                    SharedPreferences.Editor editor = preferences.edit();
+                    editor.putString("Gender", "Male");
+                    editor.commit();
                 }else if(R.id.Female == checkedId){
-                    Toast.makeText(getApplicationContext(),"Selected Female",Toast.LENGTH_SHORT).show();
+                    SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+                    SharedPreferences.Editor editor = preferences.edit();
+                    editor.putString("Gender", "Female");
+                    editor.commit();
                 }
             }
         });

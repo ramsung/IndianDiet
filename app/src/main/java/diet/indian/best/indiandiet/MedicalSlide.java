@@ -26,20 +26,20 @@ public class MedicalSlide extends SlideFragment implements  AdapterView.OnItemSe
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.medical_card_male, container, false);
-        Spinner spin = (Spinner) view.findViewById(R.id.spinner2);
-        spin.setOnItemSelectedListener(this);
+       // Spinner spin = (Spinner) view.findViewById(R.id.spinner2);
+       // spin.setOnItemSelectedListener(this);
 
         //Creating the ArrayAdapter instance having the disease list
         ArrayAdapter aa = new ArrayAdapter(getContext(), android.R.layout.simple_spinner_item, disease);
         aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         //Setting the ArrayAdapter data on the Spinner
-        spin.setAdapter(aa);
+        //spin.setAdapter(aa);
         return view;
     }
 
     @Override
     public int backgroundColor() {
-        return R.color.green_400;
+        return R.color.white;
     }
 
     @Override
