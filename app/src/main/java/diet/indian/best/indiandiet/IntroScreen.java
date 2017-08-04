@@ -42,7 +42,7 @@ public class IntroScreen extends MaterialIntroActivity {
 
         addSlide(new loginSlide());
         addSlide(new ProfileSlide());
-        addSlide(new MedicalCard());
+        addSlide(new MedicalSlide());
 
         /*addSlide(new SlideFragmentBuilder()
                 .backgroundColor(R.color.green_700)

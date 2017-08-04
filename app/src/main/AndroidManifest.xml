@@ -44,7 +44,6 @@
         <activity
             android:name=".IntroScreen"
             android:theme="@style/Theme.Intro" />
-        <activity android:name=".MedicalCard"></activity>
 
 
     </application>

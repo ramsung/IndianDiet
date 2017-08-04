@@ -1,6 +1,8 @@
 package diet.indian.best.indiandiet;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,13 +27,23 @@ public class MedicalSlide extends SlideFragment implements  AdapterView.OnItemSe
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        final View view = inflater.inflate(R.layout.medical_card_male, container, false);
+        View view =  inflater.inflate(R.layout.medical_card_male, container, false);
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getContext());
+        String gender = preferences.getString("Gender","Male");
+        if(gender.equalsIgnoreCase("Male")){
+            view =  inflater.inflate(R.layout.medical_card_male, container, false);
+        }else if(gender.equalsIgnoreCase("Female")){
+            view = inflater.inflate(R.layout.medical_card_female,container,false);
+        }else {
+            view =  inflater.inflate(R.layout.medical_card_male, container, false);
+        }
+
        // Spinner spin = (Spinner) view.findViewById(R.id.spinner2);
        // spin.setOnItemSelectedListener(this);
 
         //Creating the ArrayAdapter instance having the disease list
-        ArrayAdapter aa = new ArrayAdapter(getContext(), android.R.layout.simple_spinner_item, disease);
-        aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        //ArrayAdapter aa = new ArrayAdapter(getContext(), android.R.layout.simple_spinner_item, disease);
+        //aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         //Setting the ArrayAdapter data on the Spinner
         //spin.setAdapter(aa);
         return view;

@@ -66,6 +66,7 @@ public class profileedit extends AppCompatActivity {
                     SharedPreferences.Editor editor = preferences.edit();
                     editor.putString("Gender", "Male");
                     editor.commit();
+                    Toast.makeText(getApplicationContext(),"male",Toast.LENGTH_SHORT).show();
                 }else if(R.id.Female == checkedId){
                     SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
                     SharedPreferences.Editor editor = preferences.edit();
