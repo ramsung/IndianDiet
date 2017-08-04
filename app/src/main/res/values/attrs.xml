@@ -21,5 +21,6 @@
     <attr name="sc_tint_color" format="color" />
     <attr name="sc_checked_text_color" format="color" />
 
+<!-- SeekBar in BMI-->
 
 </resources>

@@ -25,7 +25,7 @@ public class MedicalSlide extends SlideFragment implements  AdapterView.OnItemSe
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        final View view = inflater.inflate(R.layout.medical_card, container, false);
+        final View view = inflater.inflate(R.layout.medical_card_male, container, false);
         Spinner spin = (Spinner) view.findViewById(R.id.spinner2);
         spin.setOnItemSelectedListener(this);
 

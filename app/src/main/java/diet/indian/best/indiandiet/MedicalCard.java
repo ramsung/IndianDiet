@@ -22,15 +22,16 @@ public class MedicalCard extends Activity implements
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.medical_card);
-        Spinner spin = (Spinner) findViewById(R.id.spinner2);
-        spin.setOnItemSelectedListener(this);
+
+        setContentView(R.layout.medical_card_male);
+        //Spinner spin = (Spinner) findViewById(R.id.spinner2);
+        //spin.setOnItemSelectedListener(this);
 
         //Creating the ArrayAdapter instance having the disease list
-        ArrayAdapter aa = new ArrayAdapter(this, android.R.layout.simple_spinner_item, disease);
-        aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+       // ArrayAdapter aa = new ArrayAdapter(this, android.R.layout.simple_spinner_item, disease);
+       // aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         //Setting the ArrayAdapter data on the Spinner
-        spin.setAdapter(aa);
+       // spin.setAdapter(aa);
     }
 
     @Override

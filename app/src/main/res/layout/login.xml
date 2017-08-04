@@ -26,7 +26,9 @@
             android:text="Sign up with us!"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Menu"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"

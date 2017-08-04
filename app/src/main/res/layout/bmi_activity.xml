@@ -15,28 +15,32 @@ android:background="@color/amber_100"
     android:layout_width="match_parent"
 
               android:layout_height="wrap_content"
-              android:orientation="horizontal">
+              android:orientation="vertical">
+
     <RelativeLayout
         android:layout_width="150dp"
         android:layout_height="150dp">
+
         <pl.pawelkleczkowski.customgauge.CustomGauge
             android:id="@+id/gauge2"
             android:layout_width="140dp"
             android:layout_height="140dp"
 
             android:layout_centerHorizontal="true"
+            android:foregroundGravity="center"
             android:paddingBottom="10dp"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:paddingTop="10dp"
+
             app:gaugeEndValue="40"
             app:gaugeStartAngle="135"
             app:gaugeStartValue="0"
-
             app:gaugeStrokeCap="ROUND"
             app:gaugeStrokeColor="@color/tw__light_gray"
             app:gaugeStrokeWidth="10dp"
             app:gaugeSweepAngle="270" />
+
         <TextView
             android:id="@+id/bmiText"
             android:layout_width="wrap_content"
@@ -45,25 +49,46 @@ android:background="@color/amber_100"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="48dp"
             android:text="0"
-            android:textSize="18sp"
+            android:textSize="36sp"
             android:textStyle="bold" />
+
     </RelativeLayout>
+
+    <Button
+        android:id="@+id/calculatebmi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_span="0"
+        android:accessibilityLiveRegion="assertive"
+        android:background="@color/green_600"
+        android:gravity="center"
+        android:onClick="calculate"
+        android:paddingBottom="3dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:paddingTop="3dp"
+        android:text="CALCULATE" />
 
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TableRow
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent">
 
-            <TextView
+        <TextView
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:text="Height"
                 android:textSize="25sp" />
+
+
+
+
+
 
             <EditText
                 android:id="@+id/heightbmi"
@@ -74,11 +99,11 @@ android:background="@color/amber_100"
                 android:inputType="number"
                 android:textAlignment="center"
                 android:textSize="25sp" />
-        </TableRow>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+
+
+
+
 
             <TextView
                 android:id="@+id/textView5"
@@ -87,6 +112,9 @@ android:background="@color/amber_100"
                 android:layout_marginLeft="10dp"
                 android:text="Weight"
                 android:textSize="25sp" />
+
+
+
 
             <EditText
                 android:id="@+id/weightbmi"
@@ -97,45 +125,23 @@ android:background="@color/amber_100"
                 android:inputType="number"
                 android:textAlignment="center"
                 android:textSize="25sp" />
-        </TableRow>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Button
-                android:id="@+id/calculatebmi"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="2dp"
-                android:layout_marginTop="2dp"
-                android:layout_span="0"
-                android:accessibilityLiveRegion="assertive"
-                android:background="@color/green_600"
-                android:gravity="center"
-                android:paddingBottom="3dp"
-                android:paddingLeft="3dp"
-                android:paddingRight="3dp"
-                android:paddingTop="3dp"
-                android:text="CALCULATE"
-                android:onClick="calculate"/>
-        </TableRow>
-        <TableRow>
-            <TextView
-                android:id="@+id/resultbmi"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="0dp"
-                android:layout_marginTop="0dp"
-                android:textAlignment="center"
-                android:textSize="120sp"
-                android:textStyle="bold" />
-        </TableRow>
 
     </TableLayout>
 
+
 </LinearLayout>
-    </android.support.design.widget.CoordinatorLayout>
+
+    <TextView
+        android:id="@+id/resultbmi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:textAlignment="center"
+        android:textSize="120sp"
+        android:textStyle="bold" />
+
+</android.support.design.widget.CoordinatorLayout>
