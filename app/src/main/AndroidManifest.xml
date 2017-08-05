@@ -44,6 +44,7 @@
         <activity
             android:name=".IntroScreen"
             android:theme="@style/Theme.Intro" />
+        <activity android:name=".WelcomeActivity"/>
 
 
     </application>

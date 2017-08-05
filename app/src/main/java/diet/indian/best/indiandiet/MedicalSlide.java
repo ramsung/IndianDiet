@@ -51,7 +51,7 @@ public class MedicalSlide extends SlideFragment implements  AdapterView.OnItemSe
 
     @Override
     public int backgroundColor() {
-        return R.color.white;
+        return R.color.green_600;
     }
 
     @Override

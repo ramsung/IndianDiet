@@ -250,7 +250,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 		startActivity(run);
 	}
 	public void Introscreen(View v){
-		Intent intro = new Intent(this,IntroScreen.class);
+		Intent intro = new Intent(this,WelcomeActivity.class);
 		startActivity(intro);
 	}
 
