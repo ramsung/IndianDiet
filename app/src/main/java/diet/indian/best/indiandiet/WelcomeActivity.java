@@ -85,11 +85,14 @@ public class WelcomeActivity extends AppCompatActivity {
 
 		viewPager.setAdapter(adapter);
 		viewPager.addOnPageChangeListener(viewPagerPageChangeListener);
-
+		btnBack.setVisibility(View.INVISIBLE);
 		btnBack.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				launchHomeScreen();
+				int id = viewPager.getCurrentItem();
+				viewPager.setCurrentItem(id-1);
+
+
 			}
 		});
 
@@ -150,7 +153,11 @@ public class WelcomeActivity extends AppCompatActivity {
 				// last page. make button text to GOT IT
 				btnNext.setText(getString(R.string.start));
 				btnBack.setVisibility(View.GONE);
-			} else {
+			}else if(position == 0){
+				btnBack.setVisibility(View.INVISIBLE);
+			}
+
+			else {
 				// still pages are left
 				btnNext.setText(getString(R.string.next));
 				btnBack.setVisibility(View.VISIBLE);
