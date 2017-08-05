@@ -41,9 +41,6 @@
         <activity android:name=".bmi" />
         <activity android:name=".home"></activity>
         <activity android:name=".run"></activity>
-        <activity
-            android:name=".IntroScreen"
-            android:theme="@style/Theme.Intro" />
         <activity android:name=".WelcomeActivity"/>
 
 
