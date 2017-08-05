@@ -32,4 +32,11 @@ public class PrefManager {
         return pref.getBoolean(IS_FIRST_TIME_LAUNCH, true);
     }
 
+    public void setGender(String gender){
+        editor.putString("gender",gender);
+        editor.commit();
+    }public String getGender() {
+        return pref.getString("gender", "Male");
+    }
+
 }

@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.NumberPicker;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import pl.pawelkleczkowski.customgauge.CustomGauge;
 
@@ -52,6 +53,7 @@ public class bmi extends AppCompatActivity {
 
             gauge.setValue((int) bmiValue);
             bmiText.setText(String.valueOf((int)bmiValue));
+            Toast.makeText(getApplicationContext(),"value set",Toast.LENGTH_SHORT).show();
 
 
 
