@@ -35,7 +35,7 @@
             android:theme="@style/FullscreenTheme" />
         <activity android:name=".profileedit" />
         <activity android:name=".bmi" />
-        <activity android:name=".home"></activity>
+       <activity android:name=".home"></activity>
         <activity android:name=".run"></activity>
         <activity android:name=".WelcomeActivity">
             <intent-filter>
