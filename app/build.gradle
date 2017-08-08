@@ -19,6 +19,7 @@ android {
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -73,6 +74,9 @@ android {
         compile 'agency.tango.android:material-intro-screen:0.0.5'
         compile 'pl.pawelkleczkowski.customgauge:CustomGauge:1.0.3'
         compile 'com.jakewharton:butterknife:8.5.1'
+        compile 'com.github.florent37:diagonallayout:1.0.7'
+        compile 'com.flaviofaria:kenburnsview:1.0.7'
+        compile 'de.hdodenhof:circleimageview:2.1.0'
         testCompile 'junit:junit:4.12'
 
     }
