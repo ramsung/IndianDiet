@@ -79,7 +79,7 @@
         android:layout_marginLeft="40dp"
         android:layout_marginTop="190dp"
         android:elevation="15dp"
-        android:background="@drawable/circle"
+        android:background="@drawable/circle1"
         android:src="@drawable/hughjackman"/>
 
     <LinearLayout
