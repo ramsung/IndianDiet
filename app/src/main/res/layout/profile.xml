@@ -4,7 +4,8 @@
                 xmlns:tools="http://schemas.android.com/tools"
                 android:id="@+id/activity_main"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+    android:background="@color/white">
 
     <com.github.florent37.diagonallayout.DiagonalLayout
         android:id="@+id/diagonalLayout"
@@ -29,7 +30,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hugh Jackman"
+            android:text="Iron Man"
             android:textColor="@android:color/white"
             android:layout_gravity="top|left"
             android:fontFamily="sans-serif-light"
@@ -41,7 +42,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="25dp"
             android:orientation="horizontal"
             android:layout_marginTop="105dp"
             >
@@ -80,7 +81,7 @@
         android:layout_marginTop="190dp"
         android:elevation="15dp"
         android:background="@drawable/circle1"
-        android:src="@drawable/hughjackman"/>
+        android:src="@drawable/dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -154,12 +155,30 @@
                 android:layout_marginLeft="10dp"
                 android:textSize="14sp"/>
 
+        </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/diagonalLayout"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="7dp">
+
+            <ImageButton
+                android:id="@+id/fab"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/profedit24"
+                android:background="@color/white"
+
+                />
         </LinearLayout>
 
     </LinearLayout>
 
-    <TextView
+   <!-- <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="320dp"
@@ -174,6 +193,6 @@
         android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        />
+        />-->
 
 </RelativeLayout>
